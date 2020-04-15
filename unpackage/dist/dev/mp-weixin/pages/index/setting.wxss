@@ -1,0 +1,17 @@
+
+.setting_title1{
+	text-align: center;
+	padding: 20rpx 0 20rpx 0;
+}
+.setting_img1 image{
+	width: 90%;
+	margin-left: 5%;
+	height: 400rpx;
+}
+.setting_title2{
+	font-size: 40rpx;
+	font-weight: 600;
+	text-align: center;
+	padding: 20rpx 0 20rpx 0;
+}
+

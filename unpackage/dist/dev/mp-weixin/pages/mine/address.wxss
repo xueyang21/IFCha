@@ -1,0 +1,21 @@
+
+.address_box{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.address_btn{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.address_btn button{
+	width: 45%;
+}
+
+

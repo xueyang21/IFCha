@@ -1,0 +1,35 @@
+
+.edit_field.data-v-0113119b {
+		padding-right: 20rpx;
+		border-bottom: 1rpx solid #EEEEEE;
+}
+.edit_field3.data-v-0113119b{
+	padding-right: 0;
+}
+.edit_field3 image.data-v-0113119b {
+		width: 50rpx;
+		height: 50rpx;
+		float: right;
+		margin-top: -70rpx;
+}
+.field_txt.data-v-0113119b{
+		padding: 20rpx 30rpx 20rpx 30rpx;
+}
+.field_txt view.data-v-0113119b{
+		float: left;
+		width: 170rpx;
+}
+.field_txt textarea.data-v-0113119b{
+		color: #A5A6A8;
+		height: 80rpx;
+		margin-left: 170rpx;
+		margin-top: -1rpx;
+		width: 340rpx;
+}
+.edit_btn.data-v-0113119b{
+		width: 100%;
+		padding: 20rpx;
+		position: fixed;
+		bottom: 0;
+}
+

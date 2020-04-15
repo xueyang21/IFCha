@@ -1,0 +1,29 @@
+
+.newShipping.data-v-7e0896ed{
+	padding: 0 20rpx 0 20rpx;
+}
+.edit_field.data-v-7e0896ed {
+	padding-right: 20rpx;
+	border-bottom: 1rpx solid #A5A5A5;
+}
+.field_txt.data-v-7e0896ed{
+	padding: 20rpx 30rpx 20rpx 30rpx;
+}
+.field_txt view.data-v-7e0896ed{
+	float: left;
+	width: 170rpx;
+}
+.field_txt textarea.data-v-7e0896ed{
+	color: #A5A6A8;
+	height: 80rpx;
+	margin-left: 170rpx;
+	margin-top: -1rpx;
+	width: 340rpx;
+}
+.field_txt image.data-v-7e0896ed{
+	width: 50rpx;
+	height: 50rpx;
+	float: right;
+	margin-top: -70rpx;
+}
+

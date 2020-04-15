@@ -1,0 +1,122 @@
+
+.IFCha_reserve.data-v-33e1845d {
+	background-color: #F4F4F4;
+}
+.reserve_msg.data-v-33e1845d {
+	background-color: #FFFFFF;
+}
+.msg_title.data-v-33e1845d {
+	padding: 25rpx 0 25rpx 25rpx;
+	border-bottom: 1rpx solid #EEEEEE;
+}
+.title1.data-v-33e1845d {
+	width: 10rpx;
+	height: 50rpx;
+	float: left;
+	background-color: #000000;
+	margin-right: 20rpx;
+}
+.title2.data-v-33e1845d {
+	font-size: 34rpx;
+}
+.uni-list-cell-left.data-v-33e1845d {
+	float: left;
+}
+.msg_people.data-v-33e1845d {
+	padding: 25rpx;
+	border-bottom: 1rpx solid #EEEEEE;
+	font-size: 16px;
+	height: 90rpx;
+}
+.uni-list-cell-db.data-v-33e1845d {
+	float: right;
+}
+.uni-input.data-v-33e1845d {
+	float: right;
+}
+.msg_date.data-v-33e1845d {
+	padding: 25rpx;
+	border-bottom: 1rpx solid #EEEEEE;
+	font-size: 16px;
+}
+.date_txt.data-v-33e1845d {
+	float: right;
+	margin-top: 5rpx;
+}
+.current_input.data-v-33e1845d {
+	float: right;
+}
+.current_txt.data-v-33e1845d {
+	float: right;
+}
+.msg_money.data-v-33e1845d {
+	padding: 25rpx;
+	font-size: 16px;
+	border-bottom: 1rpx solid #EEEEEE;
+}
+.msg_money text.data-v-33e1845d {
+	float: right;
+}
+.msg_person.data-v-33e1845d {
+	font-size: 16px;
+	border-bottom: 1rpx solid #EEEEEE;
+}
+.reserve_mode.data-v-33e1845d {
+	margin-top: 40rpx;
+	background-color: #FFFFFF;
+	height: 280rpx;
+}
+.mode_title.data-v-33e1845d {
+	padding: 25rpx 0 50rpx 25rpx;
+}
+.mode1.data-v-33e1845d {
+	float: left;
+	width: 45%;
+	border-radius: 15rpx;
+	margin-left: 3%;
+	margin-right: 3%;
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 20rpx 0;
+}
+.mode2.data-v-33e1845d {
+	float: left;
+	width: 45%;
+	border-radius: 15rpx;
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 20rpx 0;
+}
+.mode1_radio.data-v-33e1845d {
+	margin-left: 50%;
+	margin-top: 10rpx;
+}
+.mode2_radio.data-v-33e1845d {
+	margin-left: 30%;
+	margin-top: 10rpx;
+}
+.reserve_remark.data-v-33e1845d {
+	padding: 30rpx;
+	margin-top: 40rpx;
+	background-color: #FFFFFF;
+	height: 280rpx;
+	margin-bottom: 80rpx;
+}
+.reserve_remark input.data-v-33e1845d{
+	height: 150rpx;
+	border: 1rpx solid #EEEEEE;
+	margin-top: 10rpx;
+	padding: 20rpx;
+}
+.reserve_btn.data-v-33e1845d{
+	padding: 20rpx 30rpx;
+	background-color: #FFFFFF;
+	bottom: 0;
+	width: 100%;
+	position: fixed;
+}
+.reserve_btn button.data-v-33e1845d{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+

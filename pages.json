@@ -1,0 +1,144 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "IFCha一夫茶"
+			}
+		}, {
+			"path": "pages/index/take",
+			"style": {
+				"navigationBarTitleText": "商品列表"
+			}
+		}, {
+			"path": "pages/index/code",
+			"style": {
+				"navigationBarTitleText": "扫码点餐"
+			}
+		}, {
+			"path": "pages/index/rese",
+			"style": {
+				"navigationBarTitleText": "预定"
+			}
+		}, {
+			"path": "pages/index/payment",
+			"style": {
+				"navigationBarTitleText": "当面付"
+			}
+		}, {
+			"path": "pages/index/panic",
+			"style": {
+				"navigationBarTitleText": "限时抢购"
+			}
+		}, {
+			"path": "pages/index/fight",
+			"style": {
+				"navigationBarTitleText": "拼团列表"
+			}
+		}, {
+			"path": "pages/index/setting",
+			"style": {
+				"navigationBarTitleText": "商家环境"
+			}
+		}, {
+			"path": "pages/index/time",
+			"style": {
+				"navigationBarTitleText": "选择时间"
+			}
+		}, {
+			"path": "pages/member/member",
+			"style": {
+				"navigationBarTitleText": "会员卡"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单列表"
+			}
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}, {
+			"path": "pages/mine/address",
+			"style": {
+				"navigationBarTitleText": "选择收货地址"
+			}
+		}, {
+			"path": "pages/mine/edit",
+			"style": {
+				"navigationBarTitleText": "编辑地址"
+			}
+		}, {
+			"path": "pages/mine/shipping",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},{
+			"path": "pages/mine/newShipping",
+			"style": {
+				"navigationBarTitleText": "新增收货地址"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "#FFF",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#000000",
+		"backgroundColor": "#F8F8F8",
+		"usingComponents": {
+			"van-button": "/wxcomponents/vant/dist/button/index",
+			"van-tab": "/wxcomponents/vant/dist/tab/index",
+			"van-tabs": "/wxcomponents/vant/dist/tabs/index",
+			"van-checkbox": "/wxcomponents/vant/dist/checkbox/index",
+			"van-checkbox-group": "/wxcomponents/vant/dist/checkbox-group/index",
+			"van-sidebar": "/wxcomponents/vant/dist/sidebar/index",
+			"van-sidebar-item": "/wxcomponents/vant/dist/sidebar-item/index",
+			"van-cell": "/wxcomponents/vant/dist/cell/index",
+			"van-cell-group": "/wxcomponents/vant/dist/cell-group/index",
+			"van-overlay": "/wxcomponents/vant/dist/overlay/index",
+			"van-grid": "/wxcomponents/vant/dist/grid/index",
+			"van-grid-item": "/wxcomponents/vant/dist/grid-item/index",
+			"van-card": "/wxcomponents/vant/dist/card/index",
+			"van-stepper": "/wxcomponents/vant/dist/stepper/index",
+			"van-submit-bar": "/wxcomponents/vant/dist/submit-bar/index",
+			"van-field": "/wxcomponents/vant/dist/field/index",
+			"van-radio": "/wxcomponents/vant/dist/radio/index",
+			"van-radio-group": "/wxcomponents/vant/dist/radio-group/index"
+		}
+	},
+	"tabBar": {
+		"color": "#a7a7a7",
+		"selectedColor": "#000000",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/image/drink.png",
+			"selectedIconPath": "static/image/drink.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/order/order",
+			"iconPath": "static/image/order.png",
+			"selectedIconPath": "static/image/order.png",
+			"text": "订单"
+		}, {
+			"pagePath": "pages/member/member",
+			"iconPath": "static/image/vip.png",
+			"selectedIconPath": "static/image/vip.png",
+			"text": "会员"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/image/mine.png",
+			"selectedIconPath": "static/image/mine.png",
+			"text": "我的"
+		}]
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+		}
+	}
+}
