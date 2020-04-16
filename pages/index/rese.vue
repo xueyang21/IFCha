@@ -59,15 +59,26 @@
 			</van-radio-group>
 		</view>
 		<!-- 预约模式结束 -->
+		<!-- 商品列表开始 -->
+		<view v-show="show" class="reserve_list">
+			<view class="list_title">
+				<view class="title1"></view>
+				<text class="title2">商品列表</text>
+			</view>
+			<view class="list_date" @click="clickNavi2">
+				<text>前往选择商品</text>
+			</view>
+		</view>
+		<!-- 商品列表结束 -->
 		<!-- 备注开始 -->
-		<view :v-if="radio != 1" class="reserve_remark">
+		<view class="reserve_remark">
 			备注
 			<input type="text" value="" placeholder="请输入备注信息" />
 		</view>
 		<!-- 备注结束 -->
 		<!-- 立即预约按钮开始 -->
 		<view class="reserve_btn">
-			<button type="default">立即预约</button>
+			<button type="default" @click="submit">立即预约</button>
 		</view>
 		<!-- 立即预约按钮结束 -->
 	</view>
@@ -82,7 +93,8 @@
 				date: new Date().toISOString().slice(0, 10),
 				array1: ['食堂点餐', '沙发', '长桌', '双人桌'],
 				i: 0,
-				radio: '1'
+				radio: '1',
+				show:false
 			}
 		},
 		methods: {
@@ -107,6 +119,23 @@
 				console.log(event)
 				const {	name } = event.currentTarget.dataset;
 				this.radio = name
+				if(name == 2){
+					this.show = true
+				}else{
+					this.show = false
+				}
+			},
+			clickNavi2(){
+				uni.navigateTo({
+					url: './take'
+				})
+			},
+			submit(){
+				uni.showToast({
+				  title: '预约成功',
+				  icon: 'success',
+				  duration: 2000
+				})
 			}
 		}
 	}
@@ -252,9 +281,26 @@
 		bottom: 0;
 		width: 100%;
 		position: fixed;
+		z-index: 99999;
 	}
 	.reserve_btn button{
 		background-color: #000000;
 		color: #FFFFFF;
+	}
+	
+	.reserve_list {
+		margin-top: 40rpx;
+		background-color: #FFFFFF;
+		height: 170rpx;
+	}
+	
+	.list_title {
+		padding: 25rpx 0 20rpx 25rpx;
+	}
+	
+	.list_date {
+		padding: 25rpx;
+		border-top: 1rpx solid #EEEEEE;
+		font-size: 16px;
 	}
 </style>

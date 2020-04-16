@@ -141,12 +141,13 @@
 .content3_cell1.data-v-22642c1f {
 	background-color: #FFFFFF;
 }
-.tab_submit.data-v-22642c1f{
+.tab_submit.data-v-22642c1f {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	z-index: 9999;
 }
-.tab_submit view.data-v-22642c1f{
+.tab_submit view.data-v-22642c1f {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -155,13 +156,15 @@
 	        flex: 1;
 	background-color: #FFFFFF;
 }
-.tab_submit text.data-v-22642c1f{
+.tab_submit text.data-v-22642c1f {
 	font-size: 34rpx;
 	width: 70%;
 	padding-top: 25rpx;
 	padding-left: 50rpx;
 }
-.tab_submit button.data-v-22642c1f{
+.tab_submit button.data-v-22642c1f {
 	width: 30%;
+	background-color: #000000;
+	color: #FFFFFF;
 }
 

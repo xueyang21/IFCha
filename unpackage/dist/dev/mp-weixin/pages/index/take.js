@@ -241,6 +241,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -253,7 +254,9 @@ var _default =
       price: 15.00,
       value: 0,
       num: 0,
-      numb: 0 };
+      numb: 0,
+      prices: 0,
+      plusList: {} };
 
   },
   onLoad: function onLoad() {
@@ -298,6 +301,21 @@ var _default =
       var _this = this;
       console.log(e.detail);
       _this.num = e.detail;
+      _this.prices = _this.num * _this.price;
+    },
+    onPlus: function onPlus(e) {
+      console.log(e);
+      this.plusList = e;
+    },
+    clickNavi: function clickNavi() {
+      var _this = this;
+      var price = _this.price; //单价
+      var prices = _this.prices; //总价
+      var name = _this.plusList.name; //商品名字
+      var bz_1 = _this.plusList.bz_1; //商品图片
+      var num = _this.num; //商品数量
+      uni.navigateTo({
+        url: "../index/submit?price=" + price + "&prices=" + prices + "&name=" + name + "&bz_1=" + bz_1 + "&num=" + num });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

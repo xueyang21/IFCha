@@ -1,8 +1,17 @@
 
+.address_head{
+	padding: 30rpx;
+}
+.box1{
+	margin-bottom: 30rpx;
+}
+.box1 text{
+	float: right;
+}
 .address_box{
 	width: 100%;
 	position: fixed;
-	bottom: 0;
+	bottom: 10rpx;
 }
 .address_btn{
 	display: -webkit-box;
@@ -14,8 +23,16 @@
 	-webkit-flex: 1;
 	        flex: 1;
 }
-.address_btn button{
+.btn{
 	width: 45%;
+	margin-left: 3.3%;
 }
-
+.btn1 button{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.btn2 button{
+	background-color: #09BA07;
+	color: #FFFFFF;
+}
 

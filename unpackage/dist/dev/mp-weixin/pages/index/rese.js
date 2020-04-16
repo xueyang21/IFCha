@@ -206,6 +206,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -215,7 +226,8 @@ var _default =
       date: new Date().toISOString().slice(0, 10),
       array1: ['食堂点餐', '沙发', '长桌', '双人桌'],
       i: 0,
-      radio: '1' };
+      radio: '1',
+      show: false };
 
   },
   methods: {
@@ -240,6 +252,23 @@ var _default =
       console.log(event);var
       name = event.currentTarget.dataset.name;
       this.radio = name;
+      if (name == 2) {
+        this.show = true;
+      } else {
+        this.show = false;
+      }
+    },
+    clickNavi2: function clickNavi2() {
+      uni.navigateTo({
+        url: './take' });
+
+    },
+    submit: function submit() {
+      uni.showToast({
+        title: '预约成功',
+        icon: 'success',
+        duration: 2000 });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

@@ -27,14 +27,15 @@
 					<van-sidebar style="float: left;">
 						<van-sidebar-item v-for="i in list" :key="i" :title="i.name" @click="mym(i.id)" />
 					</van-sidebar>
-					<van-card v-for="(i,index) in arr" :key="i" :price="price" desc="月销666笔" origin-price="30.00" :title="i.name" :thumb="i.bz_1">
+					<van-card v-for="(i,index) in arr" :key="i" :price="price" desc="月销666笔" origin-price="30.00" :title="i.name"
+					 :thumb="i.bz_1">
 						<view slot="footer">
-							<van-stepper :value="value" @change="onChange1(i,index)" />
+							<van-stepper :value="value" @change="onChange1" @plus="onPlus(i,index)" />
 						</view>
 					</van-card>
 					<view class="tab_submit">
 						<view class="">
-							<text>{{ num }}</text><button type="default">去结算</button>
+							<text>￥{{ prices }}.00</text><button type="default" @click="clickNavi">去结算</button>
 						</view>
 					</view>
 					<!-- 商品列表结束 -->
@@ -119,8 +120,10 @@
 				arr: [],
 				price: 15.00,
 				value: 0,
-				num:0,
-				numb:0
+				num: 0,
+				numb: 0,
+				prices: 0,
+				plusList:{}
 			}
 		},
 		onLoad() {
@@ -165,7 +168,22 @@
 				let _this = this
 				console.log(e.detail)
 				_this.num = e.detail
-				
+				_this.prices = _this.num * _this.price
+			},
+			onPlus(e) {
+				console.log(e)
+				this.plusList = e
+			},
+			clickNavi(){
+				let _this = this;
+				let price = _this.price; //单价
+				let prices = _this.prices; //总价
+				let name = _this.plusList.name; //商品名字
+				let bz_1 = _this.plusList.bz_1; //商品图片
+				let num = _this.num //商品数量
+				uni.navigateTo({
+					url:"../index/submit?price=" + price + "&prices=" + prices + "&name=" + name + "&bz_1=" + bz_1 + "&num=" + num
+				})
 			}
 		}
 	}
@@ -343,23 +361,30 @@
 	.content3_cell1 {
 		background-color: #FFFFFF;
 	}
-	.tab_submit{
+
+	.tab_submit {
 		position: fixed;
 		bottom: 0;
 		width: 100%;
+		z-index: 9999;
 	}
-	.tab_submit view{
+
+	.tab_submit view {
 		display: flex;
 		flex: 1;
 		background-color: #FFFFFF;
 	}
-	.tab_submit text{
+
+	.tab_submit text {
 		font-size: 34rpx;
 		width: 70%;
 		padding-top: 25rpx;
 		padding-left: 50rpx;
 	}
-	.tab_submit button{
+
+	.tab_submit button {
 		width: 30%;
+		background-color: #000000;
+		color: #FFFFFF;
 	}
 </style>

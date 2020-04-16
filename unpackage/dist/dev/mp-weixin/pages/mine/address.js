@@ -146,12 +146,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      address: {},
+      show: false,
+      add: '' };
 
-
+  },
+  onLoad: function onLoad(option) {
+    console.log(option);
+    this.address = option;
+    this.add = option.addAdd + option.addName;
+    if (Object.keys(option).length === 0) {
+      return this.show = false; // 如果为空,返回false
+    }
+    return this.show = true;
   },
   methods: {
     clickNavi: function clickNavi() {

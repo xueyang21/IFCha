@@ -114,9 +114,23 @@
 	bottom: 0;
 	width: 100%;
 	position: fixed;
+	z-index: 99999;
 }
 .reserve_btn button.data-v-33e1845d{
 	background-color: #000000;
 	color: #FFFFFF;
+}
+.reserve_list.data-v-33e1845d {
+	margin-top: 40rpx;
+	background-color: #FFFFFF;
+	height: 170rpx;
+}
+.list_title.data-v-33e1845d {
+	padding: 25rpx 0 20rpx 25rpx;
+}
+.list_date.data-v-33e1845d {
+	padding: 25rpx;
+	border-top: 1rpx solid #EEEEEE;
+	font-size: 16px;
 }
 

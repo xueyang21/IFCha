@@ -1,15 +1,15 @@
 <template>
 	<view class="IFCha_edit">
 		<view class="edit_field">
-			<van-field value="" type="text" label="收货人" placeholder="姓名" />
+			<van-field :value="name" @input="onName" type="text" label="收货人" placeholder="姓名" />
 		</view>
 		<view class="edit_field">
-			<van-field value="" type="text" label="联系电话" placeholder="手机号码" />
+			<van-field value="" @input="onTel" type="text" label="联系电话" placeholder="手机号码" />
 		</view>
 		<view class="edit_field edit_field3">
 			<view class="field_txt">
 				<view class="">详细地址<text>\n</text>(门牌号)</view>
-				<textarea :value="address.address + address.name" placeholder="输入地址或点击地图选择" />
+				<textarea :value="address.address + address.name" @input="onInput" placeholder="输入地址或点击地图选择" />
 				<image @click="openMap" src="../../static/image/dress.png" mode=""></image>
 			</view>
 		</view>
@@ -25,8 +25,11 @@
 			return {
 				address:{
 					address:'',
-					name:''
-				}
+					name:'',
+				},
+				value:'',
+				name:'',
+				tel:''
 			}
 		},
 		onLoad() {
@@ -46,7 +49,7 @@
 		},
 		methods: {
 			openMap: function() {
-				var _this = this;
+				let _this = this;
 				uni.getLocation({
 					type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
 					success: function(res) {
@@ -68,11 +71,28 @@
 				})
 			},
 			save(){
+				let _this = this;
+				let addName = _this.address.name
+				let addAdd = _this.address.address
+				let value = _this.value
+				let name = _this.name
+				let tel = _this.tel
 				uni.navigateTo({
-					url:"./address"
+					url:"./address?addName=" + addName + "&addAdd=" + addAdd + "&value=" + value + "&name=" + name + "&tel=" + tel,
 				})
+			},
+			onInput(e){
+				console.log(e.detail.value)
+				this.value = e.detail.value
+			},
+			onName(e){
+				console.log(e.detail)
+				this.name = e.detail
+			},
+			onTel(e){
+				console.log(e.detail)
+				this.tel = e.detail
 			}
-
 		}
 	}
 </script>

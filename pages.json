@@ -81,6 +81,11 @@
 			"style": {
 				"navigationBarTitleText": "新增收货地址"
 			}
+		}, {
+			"path": "pages/index/submit",
+			"style": {
+				"navigationBarTitleText": "提交订单"
+			}
 		}
 	],
 	"globalStyle": {

@@ -158,8 +158,11 @@ var _default =
     return {
       address: {
         address: '',
-        name: '' } };
+        name: '' },
 
+      value: '',
+      name: '',
+      tel: '' };
 
   },
   onLoad: function onLoad() {
@@ -201,9 +204,27 @@ var _default =
 
     },
     save: function save() {
+      var _this = this;
+      var addName = _this.address.name;
+      var addAdd = _this.address.address;
+      var value = _this.value;
+      var name = _this.name;
+      var tel = _this.tel;
       uni.navigateTo({
-        url: "./address" });
+        url: "./address?addName=" + addName + "&addAdd=" + addAdd + "&value=" + value + "&name=" + name + "&tel=" + tel });
 
+    },
+    onInput: function onInput(e) {
+      console.log(e.detail.value);
+      this.value = e.detail.value;
+    },
+    onName: function onName(e) {
+      console.log(e.detail);
+      this.name = e.detail;
+    },
+    onTel: function onTel(e) {
+      console.log(e.detail);
+      this.tel = e.detail;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
