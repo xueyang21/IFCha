@@ -15,7 +15,6 @@
 				</view>
 			</view>
 		</view>
-		<button type="default" @click="">获取联系人信息</button>
 	</view>
 </template>
 
@@ -78,7 +77,7 @@
 	}
 	.edit_field {
 		padding-right: 20rpx;
-		border-bottom: 1rpx solid #A5A5A5;
+		border-bottom: 1rpx solid #E5EE5;
 	}
 	.field_txt{
 		padding: 20rpx 30rpx 20rpx 30rpx;

@@ -181,9 +181,20 @@
 				let name = _this.plusList.name; //商品名字
 				let bz_1 = _this.plusList.bz_1; //商品图片
 				let num = _this.num //商品数量
-				uni.navigateTo({
-					url:"../index/submit?price=" + price + "&prices=" + prices + "&name=" + name + "&bz_1=" + bz_1 + "&num=" + num
-				})
+				if(_this.prices != 0){
+					uni.navigateTo({
+						url:"../index/submit?price=" + price + "&prices=" + prices + "&name=" + name + "&bz_1=" + bz_1 + "&num=" + num
+					})
+				}else{
+					uni.showToast({
+					  title: '请选择商品',
+					  icon: 'loading',
+					  duration: 2000
+					})
+					uni.navigateTo({
+						url:''
+					})
+				}
 			}
 		}
 	}

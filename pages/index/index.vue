@@ -119,10 +119,10 @@
 				interval: 2000,
 				duration: 500,
 				banners: [{
-						photo: require('../../static/image/qq3.jpg')
+						photo: require('../../static/image/qq4.jpg')
 					},
 					{
-						photo: require('../../static/image/qq2.jpg')
+						photo: require('../../static/image/qq4.jpg')
 					}
 				],
 				takes: [{

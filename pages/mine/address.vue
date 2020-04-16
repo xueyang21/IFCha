@@ -6,7 +6,7 @@
 					收货人：{{ address.name }}<text>{{address.tel}}</text>
 				</view>
 				<view class="box2">
-					收货地址: {{address.value!=''?address.value:add}}
+					收货地址： {{address.value!='' ? address.value : add}}
 				</view>
 			</view>
 		</view>
@@ -60,12 +60,14 @@
 <style>
 	.address_head{
 		padding: 30rpx;
+		border-bottom:1rpx solid #E5E5E5;
 	}
 	.box1{
 		margin-bottom: 30rpx;
 	}
 	.box1 text{
 		float: right;
+		margin-right: 20rpx;
 	}
 	
 	.address_box{

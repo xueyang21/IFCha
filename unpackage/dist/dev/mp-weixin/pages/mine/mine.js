@@ -178,11 +178,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
     return {
-      userInfo: {} };
+      userInfo: {},
+      show: true };
 
   },
   onLoad: function onLoad() {
@@ -197,6 +199,10 @@ var _default =
     getuserinfo: function getuserinfo(e) {
       console.log(e.detail.userInfo);
       this.userInfo = e.detail.userInfo;
+      if (Object.keys(this.userInfo).length === 0) {
+        return this.show = true; // 如果为空,返回false
+      }
+      return this.show = false;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

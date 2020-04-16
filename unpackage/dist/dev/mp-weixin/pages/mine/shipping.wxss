@@ -1,0 +1,8 @@
+
+.ship_head{
+	padding: 25rpx;
+}
+.head_view1{
+	margin-bottom: 20rpx;
+}
+

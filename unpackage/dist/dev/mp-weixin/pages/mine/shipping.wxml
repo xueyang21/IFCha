@@ -1,1 +1,1 @@
-<view></view>
+<view class="IFCha_ship"><view data-event-opts="{{[['tap',[['clickNavi',['$event']]]]]}}" hidden="{{!(show)}}" class="ship_head" bindtap="__e"><view class="head_view1">{{''+add.userName+","+add.telNumber+''}}</view><view>{{''+add.provinceName+" "+add.cityName+" "+add.countyName+" "+add.detailInfo+''}}</view></view></view>

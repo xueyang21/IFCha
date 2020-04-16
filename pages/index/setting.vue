@@ -4,13 +4,13 @@
 			———— 关于我们 ————
 		</view>
 		<view class="setting_img1">
-			<image src="../../static/image/qq.jpg" mode=""></image>
+			<image src="../../static/image/qq3.jpg" mode=""></image>
 		</view>
 		<view class="setting_title2">
 			台湾十大有机高山茶
 		</view>
 		<view class="setting_img1">
-			<image src="../../static/image/qq.jpg" mode=""></image>
+			<image src="../../static/image/qq2.jpg" mode=""></image>
 		</view>
 	</view>
 </template>

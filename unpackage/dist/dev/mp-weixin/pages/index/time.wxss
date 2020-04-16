@@ -33,4 +33,20 @@
 	background-color: #000000;
 	color: #FFFFFF;
 }
+.time_content2 {
+	padding: 25rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.content2_view1{
+	width: 20%;
+}
+.content2_view2{
+	width: 80%;
+	margin-top: 5rpx;
+}
 

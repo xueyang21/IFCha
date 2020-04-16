@@ -5,7 +5,8 @@
 			<image class="head_image1" :src="userInfo.avatarUrl" mode=""></image>
 			<view class="head_txt">
 				<view>{{ userInfo.nickName }}</view>
-				<button type="default" open-type="getUserInfo" lang="zh_CN" @getuserinfo="getuserinfo" withCredentials="true">点击授权</button>
+				<button v-show="show" type="default" open-type="getUserInfo" lang="zh_CN" @getuserinfo="getuserinfo"
+				 withCredentials="true">点击授权</button>
 			</view>
 			<image class="head_image2" src="../../static/image/right.png" mode=""></image>
 		</view>
@@ -49,7 +50,8 @@
 	export default {
 		data() {
 			return {
-				userInfo:{}
+				userInfo: {},
+				show: true
 			}
 		},
 		onLoad() {
@@ -64,6 +66,10 @@
 			getuserinfo(e) {
 				console.log(e.detail.userInfo)
 				this.userInfo = e.detail.userInfo
+				if (Object.keys(this.userInfo).length === 0) {
+					return this.show = true // 如果为空,返回false
+				}
+				return this.show = false
 			}
 
 		}
@@ -163,7 +169,7 @@
 
 	.center_image {
 		width: 100%;
-		height: 200rpx;
+		height: 400rpx;
 		margin-top: 20rpx;
 		margin-bottom: 20rpx;
 	}

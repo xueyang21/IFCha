@@ -102,13 +102,13 @@
 	height: 280rpx;
 	margin-bottom: 80rpx;
 }
-.reserve_remark input.data-v-33e1845d{
+.reserve_remark input.data-v-33e1845d {
 	height: 150rpx;
 	border: 1rpx solid #EEEEEE;
 	margin-top: 10rpx;
 	padding: 20rpx;
 }
-.reserve_btn.data-v-33e1845d{
+.reserve_btn.data-v-33e1845d {
 	padding: 20rpx 30rpx;
 	background-color: #FFFFFF;
 	bottom: 0;
@@ -116,7 +116,7 @@
 	position: fixed;
 	z-index: 99999;
 }
-.reserve_btn button.data-v-33e1845d{
+.reserve_btn button.data-v-33e1845d {
 	background-color: #000000;
 	color: #FFFFFF;
 }

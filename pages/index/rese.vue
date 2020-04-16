@@ -18,7 +18,7 @@
 			</view>
 			<view class="msg_date" @click="clickNavi">
 				<text>选择时间</text>
-				<text class="date_txt">{{ date }}日12:00</text>
+				<text class="date_txt">{{ date }}日{{ time }}</text>
 			</view>
 			<view class="msg_people">
 				<view class="uni-list-cell-left">
@@ -94,8 +94,13 @@
 				array1: ['食堂点餐', '沙发', '长桌', '双人桌'],
 				i: 0,
 				radio: '1',
-				show:false
+				show: false,
+				time: '12.00'
 			}
+		},
+		onLoad(option) {
+			console.log(option)
+			this.time = option.time
 		},
 		methods: {
 			bindPickerChange: function(e) {
@@ -117,24 +122,26 @@
 
 			onClick(event) {
 				console.log(event)
-				const {	name } = event.currentTarget.dataset;
+				const {
+					name
+				} = event.currentTarget.dataset;
 				this.radio = name
-				if(name == 2){
+				if (name == 2) {
 					this.show = true
-				}else{
+				} else {
 					this.show = false
 				}
 			},
-			clickNavi2(){
+			clickNavi2() {
 				uni.navigateTo({
 					url: './take'
 				})
 			},
-			submit(){
+			submit() {
 				uni.showToast({
-				  title: '预约成功',
-				  icon: 'success',
-				  duration: 2000
+					title: '预约成功',
+					icon: 'success',
+					duration: 2000
 				})
 			}
 		}
@@ -260,7 +267,7 @@
 		margin-left: 30%;
 		margin-top: 10rpx;
 	}
-	
+
 	.reserve_remark {
 		padding: 30rpx;
 		margin-top: 40rpx;
@@ -268,14 +275,15 @@
 		height: 280rpx;
 		margin-bottom: 80rpx;
 	}
-	.reserve_remark input{
+
+	.reserve_remark input {
 		height: 150rpx;
 		border: 1rpx solid #EEEEEE;
 		margin-top: 10rpx;
 		padding: 20rpx;
 	}
-	
-	.reserve_btn{
+
+	.reserve_btn {
 		padding: 20rpx 30rpx;
 		background-color: #FFFFFF;
 		bottom: 0;
@@ -283,21 +291,22 @@
 		position: fixed;
 		z-index: 99999;
 	}
-	.reserve_btn button{
+
+	.reserve_btn button {
 		background-color: #000000;
 		color: #FFFFFF;
 	}
-	
+
 	.reserve_list {
 		margin-top: 40rpx;
 		background-color: #FFFFFF;
 		height: 170rpx;
 	}
-	
+
 	.list_title {
 		padding: 25rpx 0 20rpx 25rpx;
 	}
-	
+
 	.list_date {
 		padding: 25rpx;
 		border-top: 1rpx solid #EEEEEE;

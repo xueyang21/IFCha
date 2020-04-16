@@ -9,8 +9,22 @@
 		<view class="time_content">
 			已选日期：{{ date }}
 		</view>
+		<!-- 选择时间 -->
+		<view class="time_content2">
+			<view class="content2_view1">
+				选择时间：
+			</view>
+			<view class="content2_view2">
+				<picker mode="time" :value="time" start="10:00" end="22.00" @change="bindTimeChange">
+					<view class="">{{ time }}</view>
+				</picker>
+			</view>
+		</view>
+		
+		<!-- 选择时间 -->
+
 		<view class="time_btn">
-			<button type="default">立即预约</button>
+			<button type="default" @click="clickNavi">确认选择</button>
 		</view>
 	</view>
 </template>
@@ -20,6 +34,19 @@
 		data() {
 			return {
 				date: new Date().toISOString().slice(0, 10),
+				time: '12:00'
+			}
+		},
+		methods: {
+			bindTimeChange: function(e) {
+				console.log(e.detail.value)
+				this.time = e.detail.value
+			},
+			clickNavi(){
+				let time = this.time
+				uni.navigateTo({
+					url:"./rese?time=" + time
+				})
 			}
 		}
 	}
@@ -66,5 +93,18 @@
 	.time_btn button {
 		background-color: #000000;
 		color: #FFFFFF;
+	}
+	
+	.time_content2 {
+		padding: 25rpx;
+		display: flex;
+		flex: 1;
+	}
+	.content2_view1{
+		width: 20%;
+	}
+	.content2_view2{
+		width: 80%;
+		margin-top: 5rpx;
 	}
 </style>
